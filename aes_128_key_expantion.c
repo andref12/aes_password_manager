@@ -19,4 +19,17 @@ word * RotWord(word * single_word){
     return rot_word;    
 }
 
-word * SubWord(word * single_word);
+word * Sbox(word * single_word){
+    if (!single_word) return NULL;  // Check for null input
+
+    single_word->byte1 = sbox[single_word->byte1];
+    single_word->byte2 = sbox[single_word->byte2];
+    single_word->byte3 = sbox[single_word->byte3];
+    single_word->byte4 = sbox[single_word->byte4];
+
+    return single_word;
+}
+
+word * SubWord(word * single_word){
+    
+}
